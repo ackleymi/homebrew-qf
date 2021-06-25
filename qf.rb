@@ -5,28 +5,28 @@
 class Qf < Formula
   desc "Example QuickFIX/Go Applications."
   homepage "https://github.com/ackleymi/examples"
-  version "2.0.6"
+  version "2.0.10"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.6/qf_2.0.6_Darwin_x86_64.tar.gz"
-      sha256 "4da122035c9411ae429b0532e8990a9bed536dc9422c1f945b11f59299f14947"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Darwin_x86_64.tar.gz"
+      sha256 "f298517e2f787206eb7ec1849427032e31312f3783b826a6c5b0e0f348a64dd4"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.6/qf_2.0.6_Darwin_arm64.tar.gz"
-      sha256 "339e8d44dabe787dabab676c842b9ada1fe05954d14d3e61d8ce5ab40af1c997"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Darwin_arm64.tar.gz"
+      sha256 "e119b5d7686a72f1d7f31f53c641d7ea2f797495dfa61d3774265fc0efae723b"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.6/qf_2.0.6_Linux_x86_64.tar.gz"
-      sha256 "e211d0ff7a742544e5878244c1f08997786b54ef4c0ca2602a92754fdbb2ac4c"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Linux_x86_64.tar.gz"
+      sha256 "43c45484920bd67fb86c6b0111dde5da430cd6155259a3edbdd3f04aa54f27f6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.6/qf_2.0.6_Linux_arm64.tar.gz"
-      sha256 "4d015445be7ae4d410280539987b02522405c2a6fa198ea8d65fad47b537dfd2"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Linux_arm64.tar.gz"
+      sha256 "a2e17ebe86129e0a4d6862a2dbc807b411da0d684d36d900ebf7590dcef4c264"
     end
   end
 
@@ -58,6 +58,7 @@ class Qf < Formula
     <string>#{var}/log/qtrn.log</string>
   </dict>
 </plist>
+
   EOS
   end
 end
