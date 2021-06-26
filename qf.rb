@@ -5,33 +5,38 @@
 class Qf < Formula
   desc "Example QuickFIX/Go Applications."
   homepage "https://github.com/ackleymi/examples"
-  version "2.0.10"
+  version "2.0.11"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Darwin_x86_64.tar.gz"
-      sha256 "f298517e2f787206eb7ec1849427032e31312f3783b826a6c5b0e0f348a64dd4"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.11/qf_2.0.11_Darwin_x86_64.tar.gz"
+      sha256 "442c175d95d5560eea07b5582b6d870de06362ed05b4f2798e941cfe24699072"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Darwin_arm64.tar.gz"
-      sha256 "e119b5d7686a72f1d7f31f53c641d7ea2f797495dfa61d3774265fc0efae723b"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.11/qf_2.0.11_Darwin_arm64.tar.gz"
+      sha256 "f5a5543b7d167f3f2d89cb3536fb5faa0cbd6dc8066847ef21710b18c6dd7512"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Linux_x86_64.tar.gz"
-      sha256 "43c45484920bd67fb86c6b0111dde5da430cd6155259a3edbdd3f04aa54f27f6"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.11/qf_2.0.11_Linux_x86_64.tar.gz"
+      sha256 "46bd1a1610f4ac4b5fda4704c0522de8f92ed01f341a69e998fe3e9a532b271f"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ackleymi/examples/releases/download/v2.0.10/qf_2.0.10_Linux_arm64.tar.gz"
-      sha256 "a2e17ebe86129e0a4d6862a2dbc807b411da0d684d36d900ebf7590dcef4c264"
+      url "https://github.com/ackleymi/examples/releases/download/v2.0.11/qf_2.0.11_Linux_arm64.tar.gz"
+      sha256 "ebbc0e07757857174104beeff68f4f948aa5cc7f00e4751b48c3adaa96419694"
     end
   end
 
   def install
     bin.install "qf"
+  end
+
+  def caveats; <<~EOS
+    Thanks for installing the Quickfix/Go examples
+  EOS
   end
 
   plist_options :startup => false
